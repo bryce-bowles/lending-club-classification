@@ -1,5 +1,5 @@
 # Lending Club Classification Analysis: 
-Built a logistic regression model and a classification tree model for predicting the final status of a loan based on multiple variables available. Confusion matrix and misclassification rate for each model for a test dataset. Includes variables that appear to be important for predicting outcome. Plotted and described the ROC curves and AUC for the four models to provide a recommendation. ([Report](https://github.com/bryce-bowles/lending-club-classification/blob/f14d7c757bd5d56aa24c444df32d96931a77d536/6_Assignment4.pdf))
+Built a logistic regression model and a classification tree model for predicting the final status of a loan based on multiple variables available. Confusion matrix and misclassification rate for each model for a test dataset. Includes variables that appear to be important for predicting outcome. Plotted and described the ROC curves and AUC for the four models to provide my recommendation. ([Report](https://github.com/bryce-bowles/lending-club-classification/blob/f14d7c757bd5d56aa24c444df32d96931a77d536/6_Assignment4.pdf))
 
 ## Project Instructions
 11/06/2020
