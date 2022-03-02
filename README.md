@@ -1,12 +1,8 @@
 # Lending Club Classification Analysis: 
 Built a logistic regression model and a classification tree model for predicting the final status of a loan based on various variables available. Confusion matrix and misclassification rate for each model for a test dataset. Variables that appear to be important for predicting outcome. Plotted and described the ROC curves and AUC for the four models. ([Report](6_Assignment4.pdf))
 
-
-**Will clean up and describe more.**
-Bryce Bowles
-648 Business Data Analytics 901
+## Project Instructions
 11/06/2020
-Assignment 4
 
 1.	Read Chapter 2.2 of Introduction to Statistical Learning in R and the article "The Foundations of Algorithmic Bias".   Write a 1/2 to 1 page response (prose, in complete sentences).  In your essay address the following:
 o	Provide two definitions of bias.
@@ -17,9 +13,7 @@ Use the Lending Club 2017 Q2 data for the remaining questions.
 
 2. Build a logistic regression model and a classification tree model for predicting the final status of a loan based on variables available at the time at which a loan is awarded.  Provide a confusion matrix and misclassification rate for each model for a test dataset.  Which variables appear to be important for predicting outcome?
  
-3. Build a logistic regression model and a classification tree model for predicting the final status of a loan based on the variables loan_amnt, funded_amnt_inv, term, int_rate, installment, grade, emp_length, home_ownership, annual_inc, verification_status, loan_status, purpose, title, dti, total_pymnt, delinq_2yrs, open_acc, pub_rec, last_pymnt_d, last_pymnt_amnt, application_type, revol_bal, revol_util, recoveries.   Use the same training and testing observations as for question 2.  Provide a confusion matrix and misclassification rate for each model for a test dataset.   To format the date in last_pymnt_d properly, use the following code:
- 
-my_df$last_pymnt_d <- as.POSIXct(my_df$last_pymnt_d)
+3. Build a logistic regression model and a classification tree model for predicting the final status of a loan based on the variables loan_amnt, funded_amnt_inv, term, int_rate, installment, grade, emp_length, home_ownership, annual_inc, verification_status, loan_status, purpose, title, dti, total_pymnt, delinq_2yrs, open_acc, pub_rec, last_pymnt_d, last_pymnt_amnt, application_type, revol_bal, revol_util, recoveries.   Use the same training and testing observations as for question 2.  Provide a confusion matrix and misclassification rate for each model for a test dataset.   To format the date in last_pymnt_d properly, use the following code: my_df$last_pymnt_d <- as.POSIXct(my_df$last_pymnt_d)
  
 4. Plot the ROC curves for your four models.  Which models perform best?  To what do you attribute the differences in performance between the models in #2 and #3?
  
