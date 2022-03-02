@@ -96,7 +96,7 @@ Classification Tree model: Of those that were Charged off, 14759 were correctly 
 
 
 
-# 4 ROC Curve Comparrison
+# 4 - ROC Curve Comparrison
 The Classification Tree model had an AUC (Area under the ROC Curve) value of 0.9885012 of and Logistic Regression had a 0.9967356 value, indicating the logistic regression is the best model for this scenario.
 
 
@@ -105,7 +105,7 @@ The Classification Tree model had an AUC (Area under the ROC Curve) value of 0.9
 
 
 
-# 5 Recommendation
+# 5 - Recommendation
 The 2nd Logistic Regression created (green) performs the best. Other factors that come into play are overfitting and biases. If I were to consider investing in Lending Club loans, I’d use the first linear regression model (Black) to support my decision making. This model does not perform as well but it also suffers from less leakage and less overfitting of the model. 
 
 
