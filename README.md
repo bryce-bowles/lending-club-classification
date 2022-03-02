@@ -46,17 +46,27 @@ The Classification Tree model was then built to compare to the logistic regressi
 
 Tree:
 
+
+
 ![image](https://user-images.githubusercontent.com/65502025/156423506-c097c8b2-4412-48ff-80cf-cb2f94d42518.png)
+
 
 
 Variable Importance: 
 
+
+
 ![image](https://user-images.githubusercontent.com/65502025/156423531-a6480f46-8d66-48f6-aa2d-0e55518bf8b7.png)
+
 
  
 A ROC Curve was used to display the models. The Classification Tree model had an AUC (Area under the ROC Curve) value of 0.6710865 of and Logistic Regression had a 0.6883902 value, indicating the logistic regression is the best model for this scenario.
 
+
+
 ![image](https://user-images.githubusercontent.com/65502025/156423567-fc1d4ac1-ba02-4a51-a508-d1708776ddba.png)
+
+
 
 ![image](https://user-images.githubusercontent.com/65502025/156423580-17e747ed-2e5c-4788-b895-01aa636e3527.png)
 
@@ -68,7 +78,10 @@ Predicting the final status of a loan based on the variables loan_amnt, funded_a
 
 First, the variables were modified from the previous models. Columns where again filtered to exclude all status types except “Fully Paid” and “Charged Off” and to only include the final status’. Similar preprocessing steps were used to remove any NA’s and adjust the home_owndership variable categories. Once again, the categories “ANY” and “NONE” were grouped with RENT.  The below summary was used to identify variable preprocessing needs. The data was split to get a sample of 10% while choosing the same proportions of status types in both the training and test data. Next, the missing data (N/As) are replaced, using the median from training data to fill the test data to prevent leakage. Since the ratio of loan_status is about 4 “charged off” to 1 “fully paid”, weights were added to indicate the significance of each type.
 
+
+
 ![image](https://user-images.githubusercontent.com/65502025/156423607-9cf0e014-bc8c-4c85-96c6-f82de1a4ad8e.png)
+
 
 
 When creating a logistic regression and classification tree models, the same steps in the above question 2 model were used.
@@ -77,12 +90,19 @@ Logistic Regression model: Of those that were Charged off, 14876 correctly class
 
 Classification Tree model: Of those that were Charged off, 14759 were correctly classified and 373 were not. Of those that were Fully Paid, 61500 were correctly classified and 3596 were not. This model had a misclassification rate of 0.04947151. The recoveries, last_pumnt_amnt, last_pymnt_d, total_pymnt etc… in that order appear to be important for predicting outcome. (the higher the value, the more important) 
 
+
+
  ![image](https://user-images.githubusercontent.com/65502025/156423648-c202d9e3-62cd-438a-b49c-5ebb7f3f2c25.png)
+
+
 
 # 4 ROC Curve Comparrison
 The Classification Tree model had an AUC (Area under the ROC Curve) value of 0.9885012 of and Logistic Regression had a 0.9967356 value, indicating the logistic regression is the best model for this scenario.
 
+
+
 ![image](https://user-images.githubusercontent.com/65502025/156423667-0b316282-aaad-4e45-bcb0-ed15d87e4bf8.png)
+
 
 
 # 5 Recommendation
