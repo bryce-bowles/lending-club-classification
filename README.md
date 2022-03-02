@@ -35,7 +35,8 @@ Other ethical challenges facing data scientists today include MSE, variance, and
 Assessing model accuracy depends on quality of fit, bias-variance trade-off, classification setting and much more. Bias may be included in a predetermined dataset. After the readings, it is my recommendation that data scientists should be aware of this and continuously collect data to avoid predetermined bias’s so that models adjust to changes made over time. In addition to continuously collecting data, continuously evaluating the performance of the model as the data changes will also be essential in obtaining optimal results. 
 
  
-# 2 - Logistic regression and classification tree model for predicting the final status of a loan based on variables available at the time at which a loan is awarded. 
+# 2 - Logistic regression and classification tree model: 
+For predicting the final status of a loan based on variables available at the time at which a loan is awarded. 
 
 After reading in the data, columns were chosen to help predict the final status of a loan such as application_type, total_bal_ex_mort, total_bc_limit and revol_util, int_rate, emp_length, annual_inc, dti, fico_range_low, and fico_range_high. Columns where then filtered to exclude all status types except “Fully Paid” and “Charged Off” and to only include the final status’. Linear regression can only predict classification models in instances where you have two outcomes. The data was split to get a sample of 10% while choosing the same proportions of status types in both the training and test data. 1,000 samples will provide a good enough turnout while keeping computational speed fast. Next, the missing data (N/As) are replaced, using the median from training data to fill the test data to prevent leakage. Since the ratio is about 4 “charged off” to 1 “fully paid”, weights were added to indicate the significance of each type.
 
@@ -62,7 +63,8 @@ A ROC Curve was used to display the models. The Classification Tree model had an
  
 
  
-# 3 - Logistic regression model and a classification tree model for predicting the final status of a loan based on the variables loan_amnt, funded_amnt_inv, term, int_rate, installment, grade, emp_length, home_ownership, annual_inc, verification_status, loan_status, purpose, title, dti, total_pymnt, delinq_2yrs, open_acc, pub_rec, last_pymnt_d, last_pymnt_amnt, application_type, revol_bal, revol_util, recoveries.  
+# 3 - Logistic regression model and a classification tree model for:
+Predicting the final status of a loan based on the variables loan_amnt, funded_amnt_inv, term, int_rate, installment, grade, emp_length, home_ownership, annual_inc, verification_status, loan_status, purpose, title, dti, total_pymnt, delinq_2yrs, open_acc, pub_rec, last_pymnt_d, last_pymnt_amnt, application_type, revol_bal, revol_util, recoveries.  
 
 First, the variables were modified from the previous models. Columns where again filtered to exclude all status types except “Fully Paid” and “Charged Off” and to only include the final status’. Similar preprocessing steps were used to remove any NA’s and adjust the home_owndership variable categories. Once again, the categories “ANY” and “NONE” were grouped with RENT.  The below summary was used to identify variable preprocessing needs. The data was split to get a sample of 10% while choosing the same proportions of status types in both the training and test data. Next, the missing data (N/As) are replaced, using the median from training data to fill the test data to prevent leakage. Since the ratio of loan_status is about 4 “charged off” to 1 “fully paid”, weights were added to indicate the significance of each type.
 
@@ -77,11 +79,13 @@ Classification Tree model: Of those that were Charged off, 14759 were correctly 
 
  ![image](https://user-images.githubusercontent.com/65502025/156423648-c202d9e3-62cd-438a-b49c-5ebb7f3f2c25.png)
 
+# 4 ROC Curve Comparrison
 The Classification Tree model had an AUC (Area under the ROC Curve) value of 0.9885012 of and Logistic Regression had a 0.9967356 value, indicating the logistic regression is the best model for this scenario.
 
 ![image](https://user-images.githubusercontent.com/65502025/156423667-0b316282-aaad-4e45-bcb0-ed15d87e4bf8.png)
 
 
+# 5 Recommendation
 The 2nd Logistic Regression created (green) performs the best. Other factors that come into play are overfitting and biases. If I were to consider investing in Lending Club loans, I’d use the first linear regression model (Black) to support my decision making. This model does not perform as well but it also suffers from less leakage and less overfitting of the model. 
 
 
